@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phases 1 & 2 of a University Presidency: Transition</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define a custom gradient for the text */
+        .blue-gradient {
+            background-image: linear-gradient(90deg, #1d4ed8, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Set default font to Inter */
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Styling for the flow connector */
+        .flow-connector {
+            position: relative;
+            z-index: 10;
+        }
+        .flow-connector::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #3b82f6; /* blue-500 */
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        /* Hide the vertical line on desktop, use it on mobile/tablet */
+        @media (min-width: 1024px) {
+            .flow-connector::after {
+                display: none;
+            }
+        }
+        
+        .faq-content {
+            transition: max-height 0.5s ease-in-out;
+            max-height: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Header & Hero Section -->
+    <header class="pt-16 pb-16 lg:pt-24 lg:pb-32 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-center">
+                The <span class="blue-gradient">Transition Phases</span> of a University Presidency
+            </h1>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight tracking-tight text-center text-gray-700 mt-2">
+                Phases 1 & 2: From Preparation to Presence
+            </h2>
+            <p class="mt-6 text-xl text-gray-500 text-center max-w-4xl mx-auto">
+                The journey begins with intense, private learning, followed by the highly visible "honeymoon" period focused on engagement and small, impactful wins.
+            </p>
+        </div>
+    </header>
+
+    <!-- Transition Phases Container -->
+    <section class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="lg:grid lg:grid-cols-2 gap-12 flow-connector">
+
+            <!-- PHASE 1: PRESIDENT-ELECT (Behind the Scenes) -->
+            <div class="bg-gray-100 p-8 rounded-3xl shadow-2xl transition hover:shadow-3xl border-t-8 border-gray-400 mb-12 lg:mb-0 lg:order-1">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-full bg-gray-500 text-white font-bold text-xl shadow-md">
+                        <i data-lucide="eye-off" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Phase 1</p>
+                        <h3 class="text-3xl font-extrabold text-gray-800">President-Elect</h3>
+                        <p class="text-xl italic text-gray-600">"I Don’t Know You; You Don’t Know Me"</p>
+                    </div>
+                </div>
+
+                <p class="text-lg text-gray-700 mt-6 border-l-4 border-gray-500 pl-4 py-2">
+                    <strong>Timing:</strong> From announcement until the official start date. Operates entirely <strong>behind the scenes</strong>, without formal authority.
+                </p>
+
+                <h4 class="text-xl font-bold text-gray-700 mt-8 mb-4 border-b pb-2 flex items-center">
+                    <i data-lucide="lock" class="w-5 h-5 mr-2 text-gray-500"></i>
+                    Key Preparatory Activities
+                </h4>
+                <div class="space-y-4">
+                    <div class="p-4 bg-white rounded-xl shadow-md flex items-start">
+                        <i data-lucide="file-search" class="w-6 h-6 mr-3 text-gray-600 flex-shrink-0 mt-1"></i>
+                        <p class="text-gray-800 font-medium">Analyzing <strong>Institutional Documents</strong>: Budgets, accreditation reports, debt summaries, and climate surveys.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-md flex items-start">
+                        <i data-lucide="globe" class="w-6 h-6 mr-3 text-gray-600 flex-shrink-0 mt-1"></i>
+                        <p class="text-gray-800 font-medium">Reviewing <strong>Public Resources</strong>: Websites, alumni publications, social media, and news posts.</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl shadow-md flex items-start">
+                        <i data-lucide="message-square" class="w-6 h-6 mr-3 text-gray-600 flex-shrink-0 mt-1"></i>
+                        <p class="text-gray-800 font-medium">Compiling a list of <strong>Questions and Observations</strong> to guide future conversations in office.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-200 p-6 rounded-xl mt-8 border-l-4 border-red-500">
+                    <h5 class="font-bold text-gray-700 mb-2">Rule of Engagement</h5>
+                    <p class="text-sm text-gray-600">All external engagement must be <strong>coordinated with the sitting president or board chair</strong> to prevent overstepping formal authority.</p>
+                </div>
+            </div>
+
+            <!-- PHASE 2: NEW PRESIDENT (Public Presence) -->
+            <div class="bg-white p-8 rounded-3xl shadow-2xl transition hover:shadow-3xl border-t-8 border-blue-600 lg:order-2">
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xl shadow-md">
+                        <i data-lucide="megaphone" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-blue-500 uppercase tracking-wider">Phase 2</p>
+                        <h3 class="text-3xl font-extrabold text-blue-700">New President</h3>
+                        <p class="text-xl italic text-gray-600">"Getting to Know You, Getting to Know Me"</p>
+                    </div>
+                </div>
+
+                <p class="text-lg text-gray-700 mt-6 border-l-4 border-blue-500 pl-4 py-2">
+                    <strong>Timing:</strong> Typically spans the first 12–18 months in office—the <strong>"honeymoon period"</strong> of goodwill and mutual curiosity.
+                </p>
+
+                <h4 class="text-xl font-bold text-gray-700 mt-8 mb-4 border-b pb-2 flex items-center">
+                    <i data-lucide="trending-up" class="w-5 h-5 mr-2 text-blue-500"></i>
+                    Key Engagement & Impact Activities
+                </h4>
+                <div class="space-y-4">
+                    <div class="p-4 bg-blue-50 rounded-xl shadow-md flex items-start">
+                        <i data-lucide="users" class="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1"></i>
+                        <p class="text-gray-800 font-medium">Embarking on a <strong>Learning and Listening Tour</strong> across all constituent groups and locations.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-xl shadow-md flex items-start">
+                        <i data-lucide="target" class="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1"></i>
+                        <p class="text-gray-800 font-medium">Implementing <strong>small, visible initiatives</strong> (early wins) to signal impact and commitment.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-xl shadow-md flex items-start">
+                        <i data-lucide="briefcase" class="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1"></i>
+                        <p class="text-gray-800 font-medium">Assessing the <strong>senior leadership team</strong> for alignment with institutional goals and readiness for transformation.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 p-6 rounded-xl mt-8 border-l-4 border-green-500">
+                    <h5 class="font-bold text-gray-700 mb-2">Example: The Possibility Fund</h5>
+                    <p class="text-sm text-gray-600">A president launched a “Possibility Fund” offering small grants for high-impact, low-cost projects, demonstrating an early commitment to <strong>innovation and engagement</strong>.</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Overall Conclusion -->
+        <div class="mt-20 max-w-4xl mx-auto">
+            <section class="bg-white p-8 rounded-2xl shadow-xl border-l-4 border-blue-600">
+                <h2 class="text-2xl font-bold text-gray-700 mb-4 flex items-center">
+                    <i data-lucide="cast" class="w-6 h-6 mr-3 text-blue-500"></i>
+                    Laying the Foundation for Success
+                </h2>
+                <p class="text-lg text-gray-700">These transition phases are crucial. They dictate the pace and direction of the rest of the presidency. Phase 1 provides the <strong>essential knowledge base</strong> needed to ask the right questions, and Phase 2 provides the platform to <strong>build the trust</strong> required for later, tougher decisions.</p>
+            </section>
+            
+            <!-- Attribution Link -->
+            <p class="text-sm italic text-gray-500 mt-10 text-right">
+                Reference: <a href="https://lorivarlotta.com/phase-1-phase-2-of-a-university-presidency-transition/" target="_blank" class="text-blue-600 hover:text-blue-700 underline">Phase 1 & Phase 2 of a University Presidency: Transition by Lori Varlotta</a>
+            </p>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="mt-20">
+            <h2 class="text-3xl font-bold text-gray-700 mb-10 text-center">Frequently Asked Questions</h2>
+            
+            <div class="max-w-4xl mx-auto space-y-4">
+
+                <!-- FAQ Item 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="font-semibold text-xl text-gray-700 flex justify-between items-center cursor-pointer" onclick="toggleAccordion(this)">
+                        <span>What should a president-elect focus on before taking office?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="faq-content mt-2 text-gray-600 overflow-hidden">
+                        <p class="pt-2 border-t mt-2"><strong>Listen, learn, and build institutional awareness</strong> by reviewing documents and media. Crucially, avoid making any official decisions prematurely, as you lack formal authority.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="font-semibold text-xl text-gray-700 flex justify-between items-center cursor-pointer" onclick="toggleAccordion(this)">
+                        <span>What is expected in the first 90 days?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="faq-content mt-2 text-gray-600 overflow-hidden">
+                        <p class="pt-2 border-t mt-2">The focus should be on <strong>presence, engagement, and listening</strong> rather than major changes. The goal is to set a tone of respect, commitment, and readiness for future action.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="font-semibold text-xl text-gray-700 flex justify-between items-center cursor-pointer" onclick="toggleAccordion(this)">
+                        <span>How can an outgoing president-elect meet faculty and staff before officially starting?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="faq-content mt-2 text-gray-600 overflow-hidden">
+                        <p class="pt-2 border-t mt-2">Yes, but only if <strong>coordinated with the sitting president</strong>. Early visits are designed for storytelling, listening, and initial rapport-building, not policy discussion.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="font-semibold text-xl text-gray-700 flex justify-between items-center cursor-pointer" onclick="toggleAccordion(this)">
+                        <span>How can trust be built with the campus community during the honeymoon?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="faq-content mt-2 text-gray-600 overflow-hidden">
+                        <p class="pt-2 border-t mt-2">Trust is built through <strong>consistent presence, reliable follow-through</strong> on small promises, genuine empathy, and transparent, personal engagement.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            &copy; 2025 Higher Education Leadership Transitions. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Lucide Icons and FAQ Accordion -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Simple Accordion Functionality
+        function toggleAccordion(headerElement) {
+            const content = headerElement.nextElementSibling;
+            const icon = headerElement.querySelector('i');
+
+            // Find all other open content elements and close them
+            document.querySelectorAll('.faq-content').forEach(item => {
+                if (item !== content && item.style.maxHeight) {
+                    item.style.maxHeight = null;
+                    const siblingIcon = item.previousElementSibling?.querySelector('i');
+                    if (siblingIcon) {
+                        siblingIcon.classList.remove('rotate-180');
+                    }
+                }
+            });
+
+            // Toggle the current element
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.classList.remove('rotate-180');
+            } else {
+                // Set height based on content to enable smooth transition
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
