@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Education: Empowering Faculty & Supporting Students</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-node {
+            background-color: #ffffff;
+            border: 2px solid #52A8FF;
+            color: #004AAD;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            flex-grow: 1;
+            min-width: 180px;
+        }
+        .flowchart-arrow {
+            font-size: 2.5rem;
+            color: #0073E6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+        .kpi-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #0073E6;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+        
+        <header class="text-center py-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#004AAD]">AI in Education: A New Partnership</h1>
+            <p class="text-lg md:text-xl mt-4 text-gray-600">Empowering Faculty and Supporting Students for a Transformed Learning Experience</p>
+        </header>
+
+        <main>
+            <section id="vision" class="mb-12">
+                <div class="bg-white rounded-lg shadow-md p-6 md:p-8 text-center">
+                    <h2 class="text-2xl font-bold text-[#004AAD] mb-4">The Vision: From Burden to Breakthrough</h2>
+                    <p class="max-w-3xl mx-auto text-base">Artificial Intelligence is not a replacement for educators but a powerful partner. By automating tedious tasks, AI frees faculty to focus on what's irreplaceable: mentorship, deep engagement, and fostering genuine human connection with students. The goal is to elevate, not eliminate, the human element in education.</p>
+                </div>
+            </section>
+            
+            <section id="adoption" class="mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-[#004AAD] mb-2 text-center">AI Tool Adoption in Higher Education</h3>
+                        <p class="text-sm text-center mb-4 text-gray-600">A growing number of institutions are integrating AI tools to enhance their educational framework. This chart represents the breakdown of institutions by their stage of AI adoption, reflecting a significant shift towards leveraging technology for administrative and pedagogical support.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="adoptionDonutChart"></canvas>
+                        </div>
+                    </div>
+                     <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-center items-center text-center h-full">
+                        <h3 class="text-xl font-bold text-[#004AAD] mb-2">Focus on Human Connection</h3>
+                        <p class="kpi-number">+40%</p>
+                        <p class="text-gray-600">Projected increase in time available for direct student mentorship and interaction when AI handles administrative tasks. AI empowers educators to be more present and impactful.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="faculty" class="mb-12">
+                <h2 class="text-3xl font-bold text-[#004AAD] text-center mb-8">👨‍🏫 Empowering Faculty: Reclaiming Time & Enhancing Teaching</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-md p-6 order-2 lg:order-1">
+                        <h3 class="text-xl font-bold text-[#004AAD] mb-2">Shifting the Focus of Faculty Workload</h3>
+                        <p class="text-sm mb-4 text-gray-600">By automating routine tasks, AI dramatically alters how educators allocate their time. This comparison shows a significant reduction in administrative burdens, allowing faculty to invest more deeply in high-impact activities like curriculum development and direct student engagement.</p>
+                        <div class="chart-container h-80 md:h-96">
+                            <canvas id="facultyTimeChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="space-y-4 order-1 lg:order-2">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h4 class="text-lg font-semibold text-[#0073E6]">Administrative Relief</h4>
+                            <p class="text-gray-600 mt-1">AI tools automate grading for low-stakes assignments and assist in drafting comprehensive syllabi, significantly cutting down on administrative hours.</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h4 class="text-lg font-semibold text-[#0073E6]">Enhanced Teaching Tools</h4>
+                            <p class="text-gray-600 mt-1">AI helps generate personalized learning paths, quizzes, and practice materials, tailoring the educational experience to individual student needs and learning paces.</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h4 class="text-lg font-semibold text-[#0073E6]">Data-Driven Insights</h4>
+                            <p class="text-gray-600 mt-1">By analyzing performance data, AI can highlight common sticking points for students, enabling instructors to proactively address challenges and refine their teaching methods.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="students" class="mb-12">
+                <h2 class="text-3xl font-bold text-[#004AAD] text-center mb-8">👩‍🎓 Supporting Students: A Personalized Learning Journey</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                     <div class="space-y-4">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h4 class="text-lg font-semibold text-[#0073E6]">Increased Accessibility</h4>
+                            <p class="text-gray-600 mt-1">With AI-powered chatbots and on-demand resources, students get 24/7 support for their questions, overcoming time constraints and catering to diverse learning schedules.</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h4 class="text-lg font-semibold text-[#0073E6]">Personalized Support</h4>
+                            <p class="text-gray-600 mt-1">AI delivers instant, customized feedback on assignments and offers practice sessions that adapt to a student's specific skill gaps, creating a truly individualized learning path.</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h4 class="text-lg font-semibold text-[#0073E6]">Enhanced Motivation</h4>
+                            <p class="text-gray-600 mt-1">Adaptive tools provide encouragement and track progress, helping students stay engaged and motivated by clearly seeing their own growth and understanding.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-[#004AAD] mb-2">Gains in Student Learning Experience</h3>
+                        <p class="text-sm mb-4 text-gray-600">The integration of AI tools positively impacts multiple facets of the student journey. This visualization illustrates the projected improvements in key areas, from resource accessibility to personalized feedback, fostering a more effective and engaging learning environment.</p>
+                        <div class="chart-container h-80 md:h-96">
+                            <canvas id="studentExperienceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="flow" class="mb-12">
+                <h2 class="text-3xl font-bold text-[#004AAD] text-center mb-8">The AI-Powered Education Cycle</h2>
+                <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                    <p class="text-center text-gray-600 mb-8">AI creates a symbiotic relationship between teaching and learning. It's a continuous feedback loop where technology enhances content, engagement, and instructional strategy, leading to better outcomes for everyone.</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 flex-wrap">
+                        <div class="flowchart-node">
+                            <div class="text-2xl mb-2">1. Faculty</div>
+                            <p>Uses AI to create personalized content & assessments</p>
+                        </div>
+                        <div class="flowchart-arrow hidden md:block">→</div>
+                        <div class="flowchart-arrow block md:hidden">↓</div>
+                        <div class="flowchart-node">
+                            <div class="text-2xl mb-2">2. Student</div>
+                            <p>Engages with AI tools for practice & instant feedback</p>
+                        </div>
+                        <div class="flowchart-arrow hidden md:block">→</div>
+                         <div class="flowchart-arrow block md:hidden">↓</div>
+                        <div class="flowchart-node">
+                             <div class="text-2xl mb-2">3. Data</div>
+                            <p>AI gathers insights on student performance & challenges</p>
+                        </div>
+                        <div class="flowchart-arrow hidden md:block">→</div>
+                         <div class="flowchart-arrow block md:hidden">↓</div>
+                        <div class="flowchart-node">
+                             <div class="text-2xl mb-2">4. Insight</div>
+                            <p>Faculty analyzes data to refine teaching strategies</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center py-6 border-t mt-8">
+            <p class="text-gray-500">Infographic inspired by reflections from Lori Varlotta on AI in Education.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function wrapLabels(label, maxLength) {
+            if (typeof label !== 'string' || label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const tooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const brilliantBlues = {
+            dark: '#004AAD',
+            primary: '#0073E6',
+            light: '#52A8FF',
+            accent: '#89CFF0',
+        };
+
+        const adoptionCtx = document.getElementById('adoptionDonutChart').getContext('2d');
+        new Chart(adoptionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Full Adoption', 'Pilot Programs', 'Exploring', 'No Plans'],
+                datasets: [{
+                    label: 'AI Adoption',
+                    data: [25, 40, 25, 10],
+                    backgroundColor: [
+                        brilliantBlues.primary,
+                        brilliantBlues.light,
+                        brilliantBlues.accent,
+                        '#e2e8f0'
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                     ...tooltipTitleCallback.plugins,
+                    legend: {
+                        position: 'bottom',
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+
+        const facultyTimeCtx = document.getElementById('facultyTimeChart').getContext('2d');
+        const facultyLabels = ['Administrative Tasks', 'Content & Curriculum Development', 'Direct Student Interaction'].map(l => wrapLabels(l, 16));
+        new Chart(facultyTimeCtx, {
+            type: 'bar',
+            data: {
+                labels: facultyLabels,
+                datasets: [
+                    {
+                        label: 'Before AI',
+                        data: [50, 25, 25],
+                        backgroundColor: brilliantBlues.light,
+                    },
+                    {
+                        label: 'After AI',
+                        data: [15, 40, 45],
+                        backgroundColor: brilliantBlues.primary,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '% of Time Spent'
+                        }
+                    }
+                },
+                plugins: {
+                     ...tooltipTitleCallback.plugins,
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+
+        const studentExperienceCtx = document.getElementById('studentExperienceChart').getContext('2d');
+        new Chart(studentExperienceCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Accessibility', 'Personalized Feedback', 'Skill Practice', 'Engagement', 'Resource Availability'],
+                datasets: [{
+                    label: 'Improvement with AI',
+                    data: [85, 90, 75, 80, 95],
+                    fill: true,
+                    backgroundColor: 'rgba(82, 168, 255, 0.2)',
+                    borderColor: brilliantBlues.light,
+                    pointBackgroundColor: brilliantBlues.light,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: brilliantBlues.light
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: '#e2e8f0'
+                        },
+                        grid: {
+                            color: '#e2e8f0'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 13
+                            },
+                            color: '#4A5568'
+                        },
+                        ticks: {
+                           display: false,
+                           stepSize: 20
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                },
+                plugins: {
+                     ...tooltipTitleCallback.plugins
+                }
+            }
+        });
+    </script>
+</body>
+</html>
