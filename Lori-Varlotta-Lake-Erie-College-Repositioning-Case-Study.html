@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lake Erie College Repositioning Case Study</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define a custom gradient for the text */
+        .blue-gradient {
+            background-image: linear-gradient(90deg, #1d4ed8, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Set default font to Inter */
+        html {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom style for the engagement timeline/grid */
+        .engagement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Texture overlay for the main content block */
+        .textured-bg {
+            background-color: #f3f4f6;
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px), radial-gradient(#d1d5db 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+
+        /* Custom style for the co-author attribution box */
+        .authors-box {
+            background-image: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Header & Hero Section -->
+    <header class="pt-16 pb-16 lg:pt-24 lg:pb-32 bg-white shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-center">
+                <span class="blue-gradient">Lake Erie College’s</span> Repositioning:
+            </h1>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-center text-gray-700 mt-2">
+                Grounded in Collaboration, Geared for Action
+            </h2>
+            <p class="mt-6 text-xl text-gray-500 text-center max-w-4xl mx-auto">
+                A case study in blending speed with inclusivity to achieve meaningful, campus-wide transformation.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Section - Textured for Depth -->
+    <div class="py-16 lg:py-24 textured-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Partnership & Timing Card -->
+            <div class="bg-white p-8 rounded-3xl shadow-2xl mb-12 border-l-8 border-blue-600">
+                <h3 class="text-2xl font-bold text-gray-700 mb-4 flex items-center">
+                    <i data-lucide="handshake" class="w-6 h-6 mr-3 text-blue-600"></i>
+                    A Partnership Built on Experience and Trust
+                </h3>
+                <p class="text-lg text-gray-700">The initiative was launched by Dr. Lori Varlotta—a two-time college president—demonstrating how transparent leadership can drive change. The process, jointly crafted as an “embedded advisor” model by President Jennifer Schuller and Dr. Varlotta, moved quickly with two intensive, week-long campus engagements in February and May 2025.</p>
+                
+                <!-- Speed vs. Collaboration Visual -->
+                <div class="mt-8 grid md:grid-cols-2 gap-6 text-center">
+                    <div class="p-4 bg-blue-50 rounded-xl border-2 border-blue-200">
+                        <i data-lucide="users" class="w-8 h-8 text-blue-600 mx-auto mb-2"></i>
+                        <p class="font-bold text-lg text-blue-700">Collaborative</p>
+                        <p class="text-sm text-gray-600">Rooted in authentic listening and campus-wide input.</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded-xl border-2 border-gray-300">
+                        <i data-lucide="rocket" class="w-8 h-8 text-gray-700 mx-auto mb-2"></i>
+                        <p class="font-bold text-lg text-gray-700">Momentum</p>
+                        <p class="text-sm text-gray-600">Transitioned from launch to final recommendation framework in just three months.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Depth and Breadth of Campus Engagement Section -->
+            <div class="bg-white p-8 rounded-3xl shadow-2xl mb-12 border-r-8 border-gray-400">
+                <h3 class="text-2xl font-bold text-gray-700 mb-6 flex items-center">
+                    <i data-lucide="microscope" class="w-6 h-6 mr-3 text-gray-600"></i>
+                    Depth and Breadth of Campus Engagement
+                </h3>
+                
+                <p class="text-lg text-gray-700 mb-6">Over three months, Dr. Varlotta met with over 100 individuals across 25+ sessions, tailoring the conversation to each audience (e.g., pedagogy with faculty, operations with staff). The key was triangulation—cross-checking themes across groups to distinguish isolated views from systemic patterns.</p>
+
+                <!-- Engagement Grid -->
+                <div class="engagement-grid">
+                    <div class="p-3 bg-blue-50 rounded-lg text-center">
+                        <i data-lucide="briefcase" class="w-5 h-5 text-blue-600 mx-auto mb-1"></i>
+                        <p class="text-xs font-semibold text-gray-700">Board Leaders & Trustees</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg text-center">
+                        <i data-lucide="graduation-cap" class="w-5 h-5 text-blue-600 mx-auto mb-1"></i>
+                        <p class="text-xs font-semibold text-gray-700">Academic Deans & Faculty</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg text-center">
+                        <i data-lucide="smile" class="w-5 h-5 text-blue-600 mx-auto mb-1"></i>
+                        <p class="text-xs font-semibold text-gray-700">Students (Ambassadors, Athletes)</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg text-center">
+                        <i data-lucide="hard-hat" class="w-5 h-5 text-blue-600 mx-auto mb-1"></i>
+                        <p class="text-xs font-semibold text-gray-700">Staff (Finance, HR, Student Life)</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg text-center">
+                        <i data-lucide="trophy" class="w-5 h-5 text-blue-600 mx-auto mb-1"></i>
+                        <p class="text-xs font-semibold text-gray-700">Coaches & Athletics Professionals</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-lg text-center">
+                        <i data-lucide="library" class="w-5 h-5 text-blue-600 mx-auto mb-1"></i>
+                        <p class="text-xs font-semibold text-gray-700">Alumni & Faculty Senate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contextually Grounded Approach Section -->
+            <div class="lg:grid lg:grid-cols-3 gap-8 items-start">
+                <div class="lg:col-span-2 bg-white p-8 rounded-3xl shadow-2xl border-l-4 border-gray-600 mb-8 lg:mb-0">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4 flex items-center">
+                        <i data-lucide="map" class="w-6 h-6 mr-3 text-gray-600"></i>
+                        Contextually Grounded Approach
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-4">The repositioning was not a generic script. Dr. Varlotta immersed herself in the College’s life—visiting the Equestrian Center and engaging with the regional context—to build recommendations on what makes Lake Erie distinct.</p>
+                    
+                    <h4 class="font-bold text-xl text-blue-600 mt-6 mb-3">Defining Strengths Affirmed:</h4>
+                    <ul class="space-y-2 text-gray-700 list-disc ml-5">
+                        <li class="flex items-start">
+                            <i data-lucide="dot" class="w-5 h-5 mr-1 text-blue-500 flex-shrink-0"></i>
+                            A small, close-knit college five miles from Lake Erie.
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="dot" class="w-5 h-5 mr-1 text-blue-500 flex-shrink-0"></i>
+                            The only four-year institution in Lake County, Ohio.
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="dot" class="w-5 h-5 mr-1 text-blue-500 flex-shrink-0"></i>
+                            Liberal arts are practiced, not merely studied.
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="dot" class="w-5 h-5 mr-1 text-blue-500 flex-shrink-0"></i>
+                            NCAA Division II athletics and a nationally recognized equestrian program.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Outcome & Conclusion Card -->
+                <div class="lg:col-span-1 bg-white p-8 rounded-3xl shadow-2xl border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-4 flex items-center">
+                        <i data-lucide="lightbulb" class="w-6 h-6 mr-3 text-blue-600"></i>
+                        The Outcome: Clarity and Action
+                    </h3>
+                    <p class="text-gray-700">The proposals provided a framework for action—not a rigid blueprint. They offer strategic identity statements and programmatic recommendations that celebrate strengths while equipping the College for future challenges with confidence.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Attribution and Co-Authors -->
+    <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-3 gap-12">
+            
+            <!-- Reference -->
+            <div class="lg:col-span-1 p-8 rounded-2xl bg-white shadow-xl">
+                <h3 class="text-xl font-bold text-gray-700 mb-3 flex items-center">
+                    <i data-lucide="book" class="w-5 h-5 mr-3 text-blue-600"></i>
+                    Reference
+                </h3>
+                <p class="text-sm italic text-gray-600">
+                    <a href="https://lorivarlotta.com/lake-erie-colleges-repositioning-rooted-in-input-ready-for-action/" target="_blank" class="text-blue-600 hover:text-blue-700 underline">
+                        Varlotta, L. E. (2025). Lake Erie College’s Repositioning: Rooted in Input, Ready for Action.
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            &copy; 2025 Higher Education Transformation Case Studies. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Lucide Icons -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
