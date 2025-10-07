@@ -64,7 +64,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Link Card 1: Admission Requirements -->
-                <a href="https://milkhac.github.io/lori-varlotta/10_Ways_Higher_Education_Leaders_Define_This_Moment.html" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                <a href="/10_Ways_Higher_Education_Leaders_Define_This_Moment.html" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
                     <div class="flex items-start space-x-4">
                         <div class="p-3 bg-blue-100 rounded-full">
                             <i data-lucide="file-text" class="w-6 h-6 text-blue-600"></i>
@@ -79,7 +79,7 @@
                 </a>
 
                 <!-- Link Card 2: Financial Aid & Scholarships -->
-                <a href="https://milkhac.github.io/lori-varlotta/AI_in_Higher_Education.html" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                <a href="/AI_in_Higher_Education.html" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
                     <div class="flex items-start space-x-4">
                         <div class="p-3 bg-blue-100 rounded-full">
                             <i data-lucide="brain" class="w-6 h-6 text-blue-600"></i>
@@ -94,16 +94,13 @@
                 </a>
 
                 <!-- Link Card 3: Choosing a Major -->
-                <a href="#choosing-major" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                <a href="/Antioch-University%E2%80%99s-National%20Model-for-Mission-Driven-Learning.html" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
                     <div class="flex items-start space-x-4">
                         <div class="p-3 bg-blue-100 rounded-full">
                             <i data-lucide="pencil-ruler" class="w-6 h-6 text-blue-600"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-gray-800">Choosing a Major</h3>
-                            <p class="mt-1 text-gray-500 text-sm">
-                                Assessments and comparisons of popular fields of study and curriculum paths.
-                            </p>
+                            <h3 class="text-xl font-bold text-gray-800">Antioch University: Graduate Programs with Purpose</h3>
                         </div>
                     </div>
                     <span class="mt-4 text-sm font-medium text-blue-600 flex items-center">
@@ -173,6 +170,29 @@
             <p>&copy; 2024 Higher Education Hub. All rights reserved. Information provided is for guidance only.</p>
         </footer>
     </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              // Detect the current domain
+              const currentHost = window.location.hostname;
+
+              // Define the two base URLs
+              const site1Base = "https://milkhac.github.io/lori-varlotta";
+              const site2Base = "https://lori-varlotta.pages.dev";
+
+              // Decide which base URL to use
+              const baseURL = currentHost.includes("github.io") ? site1Base : site2Base;
+
+              // Get all internal links that start with "/"
+              const links = document.querySelectorAll('a[href^="/"]');
+
+              links.forEach(link => {
+                const relativePath = link.getAttribute("href");
+
+                // Update href to full URL
+                link.href = baseURL + relativePath;
+              });
+            });
+    </script>
 
     <script>
         // Initialize Lucide icons after the page content is loaded
