@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Education Information Hub</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom font import (Inter) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary-blue: 60, 100%, 50%; /* Tailwind blue-600 equivalent */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* Lightest grey background */
+        }
+
+        /* Gradient Text Styling */
+        .gradient-text {
+            background: linear-gradient(90deg, #1d4ed8, #3b82f6); /* Blue to Lighter Blue */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Custom Hover Effect for Cards */
+        .link-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .link-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+            transform: translateY(-4px);
+            border-color: #3b82f6; /* Tailwind blue-500 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Header and Main Title Section -->
+        <header class="text-center py-16 bg-white rounded-xl shadow-lg mb-12">
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4 leading-tight">
+                Higher <span class="gradient-text"> Education</span>
+                <br class="hidden sm:inline"> Information Hub
+            </h1>
+            
+        </header>
+
+      
+        <!-- Navigation Hub (List of Links) -->
+        <section class="bg-white p-8 sm:p-10 rounded-xl shadow-2xl">
+            <h2 class="text-4xl font-extrabold text-gray-800 mb-8 border-b-2 border-gray-100 pb-4">
+                Navigation Hub
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Link Card 1: Admission Requirements -->
+                <a href="https://milkhac.github.io/lori-varlotta/10_Ways_Higher_Education_Leaders_Define_This_Moment.html" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-100 rounded-full">
+                            <i data-lucide="file-text" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">10 Ways for Higher Education Leaders to Meet this Moment</h3>
+                        </div>
+                    </div>
+                    <span class="mt-4 text-sm font-medium text-blue-600 flex items-center">
+                        Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </a>
+
+                <!-- Link Card 2: Financial Aid & Scholarships -->
+                <a href="https://milkhac.github.io/lori-varlotta/AI_in_Higher_Education.html" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-100 rounded-full">
+                            <i data-lucide="brain" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">AI in Education: Empowering Faculty & Supporting Students</h3>
+                        </div>
+                    </div>
+                    <span class="mt-4 text-sm font-medium text-blue-600 flex items-center">
+                        Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </a>
+
+                <!-- Link Card 3: Choosing a Major -->
+                <a href="#choosing-major" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-100 rounded-full">
+                            <i data-lucide="pencil-ruler" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Choosing a Major</h3>
+                            <p class="mt-1 text-gray-500 text-sm">
+                                Assessments and comparisons of popular fields of study and curriculum paths.
+                            </p>
+                        </div>
+                    </div>
+                    <span class="mt-4 text-sm font-medium text-blue-600 flex items-center">
+                        Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </a>
+
+                <!-- Link Card 4: University Rankings -->
+                <a href="#university-rankings" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-100 rounded-full">
+                            <i data-lucide="trophy" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">University Rankings</h3>
+                            <p class="mt-1 text-gray-500 text-sm">
+                                Comparative data on institutional reputation, research output, and student life quality.
+                            </p>
+                        </div>
+                    </div>
+                    <span class="mt-4 text-sm font-medium text-blue-600 flex items-center">
+                        Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </a>
+
+                <!-- Link Card 5: Career Outlook by Degree -->
+                <a href="#career-outlook" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-100 rounded-full">
+                            <i data-lucide="bar-chart-3" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Career Outlook by Degree</h3>
+                            <p class="mt-1 text-gray-500 text-sm">
+                                Salary projections, job growth data, and alumni success stories for different fields.
+                            </p>
+                        </div>
+                    </div>
+                    <span class="mt-4 text-sm font-medium text-blue-600 flex items-center">
+                        Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </a>
+
+                <!-- Link Card 6: Student Life Resources -->
+                <a href="#student-life" class="link-card p-6 bg-white border border-gray-200 rounded-lg flex flex-col justify-between hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-3 bg-blue-100 rounded-full">
+                            <i data-lucide="party-popper" class="w-6 h-6 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Student Life Resources</h3>
+                            <p class="mt-1 text-gray-500 text-sm">
+                                Information on housing, campus activities, wellness centers, and student support.
+                            </p>
+                        </div>
+                    </div>
+                    <span class="mt-4 text-sm font-medium text-blue-600 flex items-center">
+                        Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </a>
+
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-400 text-sm py-4">
+            <p>&copy; 2024 Higher Education Hub. All rights reserved. Information provided is for guidance only.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Lucide icons after the page content is loaded
+        lucide.createIcons();
+    </script>
+</body>
+</html>
